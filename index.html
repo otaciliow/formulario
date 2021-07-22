@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div>
+        <h1 id="titulo">Formulário!</h1>
+        <p id="subtitulo">Preencha com suas informações:</p>
+        <br>
+    </div>
+    <form action="">    
+        <fieldset class="grupo">
+            <div class="campo"> <!--o div nesse caso cumpre o papel do <br> mas com mais eficiência-->
+                <label for="nome"><strong>NOME</strong></label>
+                <input type="text" id="nome">
+            </div>
+            <div class="campo">
+                <label for="sobrenome"><strong>SOBRENOME</strong></label>
+                <input type="text" id="sobrenome">
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label for="email"><strong>E-MAIL</strong></label>
+            <input type="email" id="email">
+        </div>
+        <div class="campo">
+            <label><strong>Selecione sua trilha de Desenvolvimento:</strong></label>
+            <input type="radio" id="front-end" value="front-end" checked>
+            <label for="front-end">Front-end</label>
+            <input type="radio" id="back-end" value="back-end">
+            <label for="back-end">Back-end</label>
+            <input type="radio" id="fullstack" value="fullstack">
+            <label for="fullstack">FullStack</label>
+        </div>
+        <div class="campo">
+            <label for="sobre"><strong>Fale mais sobre você:</strong></label>
+            <textarea name="" id="sobre" rows="10" placeholder="Digite aqui"></textarea>
+         </div>
+        <button type="submit" id="botao" onsubmit="">ENVIAR</button>
+    </form>
+</body>
+</html>
