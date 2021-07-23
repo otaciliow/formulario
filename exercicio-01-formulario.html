@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Curso HTML</title>
+	<link rel="stylesheet" type="text/css" href="form.css">
+</head>
+
+<body>
+
+	<h3>Cadastro de Freelancer</h3>
+	<form action=""> <!--o parâmetro action é obrigatório para o funcionamento do formulário, e nele você define como os dados serão manipulados no caminho para o banco de dados-->
+		<fieldset class="grupo">
+			<legend>Dados cadastrais</legend>
+			<div> <!--a tag div divide as seções da página em bloco(o que está dentro da tag)-->
+				<label for="nome">Nome completo*:</label> <!--o for vincula o label a um input-->
+				<input type="text" id="nome" name="nome" placeholder="Insira seu nome completo" required> <!--o parâmetro name serve para o banco de dados que vai receber o conteúdo do input-->
+			</div>
+			<div>
+				<label for="email">E-mail*:</label>
+				<input type="text" id="email" name="email" required autocomplete="on"> <!--o autocomplete define se será mostrada uma lista com as opções de texto daquele formato já usados pelo usuário, e armazenados pelo navegador, ou se poderá "colar" o conteúdo-->
+			</div>
+			<div>
+				<label for="senha">Senha*:</label>
+				<input type="password" id="senha" name="senha" required>
+			</div>
+		</fieldset>
+		<br>
+		<fieldset class="grupo">
+			<legend>Dados pessoais</legend>
+			<div>
+				<label for="telefone">Telefone:</label>
+				<input type="tel" id="telefone" name="telefone" maxlength="10">
+			</div>
+			<div>
+				<label for="data-nasc">Data de Nascimento</label>
+				<input type="date" id="data-nasc" name="data-nasc">
+			</div>
+		</fieldset>
+		<br>
+		<fieldset class="checks">
+			<legend>Interesses</legend>
+			<div id="checkb">
+				<input type="checkbox" id="not" name="not">
+				<label for="not">Quero receber notícias</label>
+			</div>
+			<div id="checkb">
+				<input type="checkbox" id="ad" name="ad">
+				<label for="ad">Quero receber anúncios</label>
+			</div>
+			<div id="radios"> <!--para que o radio possa ter apenas uma opção selecionada, todos devem estar atribuíos ao mesmo "name"-->
+				<input type="radio" id="hirer" name="employ" value="hirer">
+				<label for="hirer">Quero ser contratante</label>
+				<input type="radio" id="hired" name="employ" value="hired">
+				<label for="hired">Quero ser contratado</label>
+			</div>
+			<div id="hour">
+				<label for="horas">Horas semanais disponíveis:</label>
+				<input type="number" id="horas" name="horas">
+			</div>
+		</fieldset>
+		<br>
+		<fieldset class="grupo">
+			<legend>Informações</legend>
+			<div>
+				<label for="">Apresentação:</label><br>
+				<textarea name="sobre" id="sobre" cols="30" rows="10" placeholder="Fale um pouco sobre você!"></textarea>
+			</div>
+			<div>
+				<label for="port">Link do Portifólio:</label>
+				<input type="url" id="port" name="port">
+			</div>
+			<div>
+				<label for="cv">Envie seu currículo:</label><br>
+				<input type="file" id="cv" name="cv">
+			</div>
+		</fieldset>
+		<br>
+		<fieldset class="grupo">
+			<legend>Atuação</legend>
+			<div id="format">
+				<label for="area">Sua formação:</label>
+				<select name="area" id="area">
+					<option selected disabled>Escolha uma opção</option> <!--faz com que a opção seja exibida enquanto o usuário não selecionar outra opção, mas que não possa ser selecionado e não terá valor-->
+					<option value="ds">Design</option> <!--é necessário ter um value para cada option, para que o banco de dados possa ler a informação que foi selecionada-->
+					<option value="m">Marketing</option>
+					<option value="p">Programação</option>
+					<option value="dd">Dados</option>
+				</select>
+			</div>
+			<div id="speciali">
+				<label for="">Sua especialização:</label>
+				<select name="spec" id="spec">
+					<option selected disabled>Escolha uma opção</option>
+					<optgroup label="Design"> <!--a tag optgroup abre uma categoria dentro da lista de opções e o parâmetro label define um nome para essa categoria-->
+						<option value="uid">UI Design</option>
+						<option value="uxd">UX Design</option>
+						<option value="uxr">UX Research</option>
+						<option value="uxw">UX Writing</option>
+					</optgroup>
+					<optgroup label="Programação">
+						<option value="bed">Back-End</option>
+						<option value="db">Banco de Dados</option>
+						<option value="fed">Front-End</option>
+						<option value="st">Teste de Software</option>
+					</optgroup>
+					<optgroup label="Marketing">
+						<option value="gh">Growth Hacking</option>
+						<option value="sm">Mídias Sociais</option>
+						<option value="seo">SEO</option>
+						<option value="wanl">Web Analytics</option>
+					</optgroup>
+					<optgroup label="Dados">
+						<option value="bi">Business Inteligence</option>
+						<option value="bd">Big Data</option>
+						<option value="dsc">Ciência de Dados</option>
+						<option value="ai">Inteligência Artifical</option>
+						<option value="ml">Machine Learning</option>
+					</optgroup>
+				</select>
+			</div>
+			<div id="idioma">
+				<label for="lang">Idioma:</label><br>
+				<select name="lang" id="lang" size="7">
+					<option value="">Português</option>
+					<option value="">Inglês</option>
+					<option value="">Espanhol</option>
+					<option value="">Mandarim</option>
+					<option value="">Francês</option>
+					<option value="">Italiano</option>
+					<option value="">Alemão</option>
+				</select>
+			</div>
+			<div id="ur">
+				<label for="estado">Seu estado de inscrição:</label>
+				<input list="estados" id="estado" name="estado"> <!--o parâmetro list tem uma função semelhante ao da tag select, porém permite que seja feita uma busca por valores pré-determinados na codificação-->
+				<datalist id="estados"> <!--a tag datalist define as opções que aparecerão na lista criada acima, e seu id deve ser igual ao nome dado para a lista no input-->
+					<option value="ac">Acre</option>
+					<option value="al">Alagoas</option>
+					<option value="ap">Amapá</option>
+					<option value="am">Amazonas</option>
+					<option value="ba">Bahia</option>
+					<option value="ce">Ceará</option>
+					<option value="df">Distrito Federal</option>
+					<option value="es">Espírito Santo</option>
+					<option value="go">Goiás</option>
+					<option value="ma">Maranhão</option>
+					<option value="mt">Mato Grosso</option>
+					<option value="ms">Mato Grosso do Sul</option>
+					<option value="mg">Minas Gerais</option>
+					<option value="pa">Pará</option>
+					<option value="pb">Paraíba</option>
+					<option value="pr">Paraná</option>
+					<option value="pe">Pernambuco</option>
+					<option value="pi">Piauí</option>
+					<option value="rj">Rio de Janeiro</option>
+					<option value="rn">Rio Grande do Norte</option>
+					<option value="rs">Rio Grande do Sul</option>
+					<option value="ro">Rondônia</option>
+					<option value="rr">Roraima</option>
+					<option value="sc">Santa Catarina</option>
+					<option value="sp">São Paulo</option>
+					<option value="se">Sergipe</option>
+					<option value="to">Tocantins</option>
+				</datalist>
+			</div>
+		</fieldset>
+		<br>
+		<input type="submit" id="send">	
+	</form>
+</body>
+</html>

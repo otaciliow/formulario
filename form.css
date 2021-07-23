@@ -1,0 +1,70 @@
+body{
+    width:600px;
+	margin: 0 auto;
+    background-color:#F0F8FF;
+    font-family:sans-serif;
+}
+h3 {
+    margin-left:5em;
+    color:#380B61;
+    font-size:30px;
+}
+legend {
+    color:#380B61;
+    font-size:20px;
+}
+fieldset{
+    position:relative;
+    margin-bottom:1em;
+    border-color:#380B61;
+    border-radius:1em;
+}
+fieldset.grupo label{
+    display:block;
+    font-size:15px;
+}
+fieldset.grupo input, textarea{
+    width:250px;
+}
+fieldset.checks label, input{
+    font-size:15px;
+}
+#checkb{
+    margin-bottom:1em;
+}
+#radios{
+    margin-bottom:1em;
+}
+textarea, input[type="url"], input[type="file"]{
+    margin-bottom:1em;
+}
+#format, #speciali, #idioma, #ur{
+    margin-bottom:1em;
+}
+#format select{
+    width:250px;
+}
+#speciali select{
+    width:250px;
+}
+#idioma select{
+    height:5em;
+    width:250px;
+}
+#ur #estado{
+    width:243px;
+}
+#send{
+    background-color:#59429D;
+    border:none;
+    padding:none;
+    width:150px;
+    margin-bottom:100px;
+    height:30px;
+    border-radius:1em;
+    margin-left:220px;
+    text-shadow:0.4em;
+}
+#send:hover{
+    background-color:#726696;
+}
