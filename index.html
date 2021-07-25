@@ -1,47 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Formulário</title>
-</head>
-<body>
-    <div>
-        <h1 id="titulo">Formulário!</h1>
-        <p id="subtitulo">Preencha com suas informações:</p>
-        <br>
-    </div>
-    <form action="">    
-        <fieldset class="grupo">
-            <div class="campo"> <!--o div nesse caso cumpre o papel do <br> mas com mais eficiência-->
-                <label for="nome"><strong>NOME</strong></label>
-                <input type="text" id="nome">
-            </div>
-            <div class="campo">
-                <label for="sobrenome"><strong>SOBRENOME</strong></label>
-                <input type="text" id="sobrenome">
-            </div>
-        </fieldset>
-        <div class="campo">
-            <label for="email"><strong>E-MAIL</strong></label>
-            <input type="email" id="email">
-        </div>
-        <div class="campo">
-            <label><strong>Selecione sua trilha de Desenvolvimento:</strong></label>
-            <input type="radio" id="front-end" value="front-end" checked>
-            <label for="front-end">Front-end</label>
-            <input type="radio" id="back-end" value="back-end">
-            <label for="back-end">Back-end</label>
-            <input type="radio" id="fullstack" value="fullstack">
-            <label for="fullstack">FullStack</label>
-        </div>
-        <div class="campo">
-            <label for="sobre"><strong>Fale mais sobre você:</strong></label>
-            <textarea name="" id="sobre" rows="10" placeholder="Digite aqui"></textarea>
-         </div>
-        <button type="submit" id="botao" onsubmit="">ENVIAR</button>
-    </form>
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Otacilio Lima</title>
+    </head>
+    <body>
+        <header>
+            <img src="linkedin-black-logo.png" alt="Icone Linkedin" id="lkd">
+            <h1 id="title">Otacilio Lima</h1>
+        </header>
+        <section>
+            <header>
+                <h2 class="subtitle">Posts</h2>
+            </header>
+            <article class="post">
+                <header>
+                    <h3 class="post-title">Post #1</h3>
+                    <img src="post.jpg" alt="Monitor com códigos html" id="codes">
+                </header>
+                <p class="post-content">Lorem ipsum dolor sit amet, <a target="_blank" href="https://www.linkedin.com/in/otacilio_dml/"> consectetur adipiscing elit</a>. Pellentesque eget erat eu <a href="mailto:dohvaakin@anymail.com"> purus fermentum tincidunt</a>. Nullam ac sem ipsum. Fusce viverra, quam vel lacinia interdum, libero augue eleifend augue, ac mollis tortor lacus et tellus. Morbi vitae mi augue. Aliquam erat volutpat. Pellentesque a accumsan purus, nec euismod libero. Sed iaculis dui nec elementum venenatis. Phasellus pellentesque eros ut hendrerit varius. Vivamus ornare tempor nunc.</p>
+            </article>
+        </section>
+        <footer>
+            <ul id="lista">
+                <li><a href="dohvaakin@anymail.com">dohvaakin@anymail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/otacilio_dml">LinkedIn</a></li>
+                <li><a href="https://github.com/otaciliow">GitHub</a></li>
+            </ul>
+        </footer>
+    </body>
 </html>
