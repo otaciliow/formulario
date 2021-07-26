@@ -1,7 +1,7 @@
 body{
     width:600px;
 	margin: 0 auto;
-    background-color:#F0F8FF;
+    background:linear-gradient(45deg,#F0F8FF, #a18ddb); /*adiciona um efeito de transição gradiente na cor, em 45 graus (pode ser com outros valores mais diretos, como "to left" ou "to right")*/
     font-family:sans-serif;
 }
 h3 {
@@ -12,12 +12,15 @@ h3 {
 legend {
     color:#380B61;
     font-size:20px;
+    text-align:center;
 }
 fieldset{
     position:relative;
     margin-bottom:1em;
     border-color:#380B61;
     border-radius:1em;
+    width:400px;
+    margin-left:18%;
 }
 fieldset.grupo label{
     display:block;
@@ -37,6 +40,7 @@ fieldset.checks label, input{
 }
 textarea, input[type="url"], input[type="file"]{
     margin-bottom:1em;
+    resize:none; /*não permite que os elementos sejam redimensionados na página*/
 }
 #format, #speciali, #idioma, #ur{
     margin-bottom:1em;
@@ -62,9 +66,13 @@ textarea, input[type="url"], input[type="file"]{
     margin-bottom:100px;
     height:30px;
     border-radius:1em;
-    margin-left:220px;
+    margin-left:250px;
     text-shadow:0.4em;
+    font-weight:bold; /*altera o peso do texto (nesse caso, para negrito)*/
+    cursor:pointer; /*altera o tipo de cursor no momento que o elemento é selecionado*/ 
+    transition:all 0.5s ease; /*adiciona um efeito de transição, com 0.5s de duração, em ease (do centro para as extremidades)*/
 }
 #send:hover{
     background-color:#726696;
+    letter-spacing:0.1em; /*aplica um efeito de aumento do espaçamento das letras do elemento, no momento que o mouse estiver sobre ele*/
 }
