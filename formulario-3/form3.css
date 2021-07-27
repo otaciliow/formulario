@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap'); /*importa uma fonte diretamente do site google fonts (o código fica disponível lá mesmo)*/
 
-*{
+*{ /*para resetar as formatações usadas pelos navegadores e ter mais liberdade para configurar a página */
     margin:0;
     border:0;
     padding:0;
     box-sizing:border-box;
-    font-family:"Poppins", sans-serif;
+    font-family:"Poppins", sans-serif; /*a fonte importada acima (deve estar entre aspas)*/
 }
 body{
     background:#1b2029;
     color:#fff;
-    font-weight:500;
-    display:flex;
-    min-height:100vh;
-    min-width:100vw;
+    font-weight:500; /*altera o "peso" da letra, tornando mais "negrita" ou menos*/
+    display:flex; /*define o comportamento do display na exibição dos elementos - flex define sua exibição como bloco de conteúdo (e os coloca centralizados)*/
+    min-height:100vh; /*define um valor mínimo para a altura de exibição (nesse caso, todo o view height (vh) da página)*/
+    min-width:100vw; /*define um valor mínimo para a largura de exibição (nesse caso, todo o view width (vw) da página)*/
 }
 main{
     width:50vw;
     display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
+    flex-direction:column; /*define a direção da exibição dos elementos em colunas*/
+    align-items:center; /*alinha os elementos no centro*/
+    justify-content:center; /*justifica os elementos no centro*/
 }
 main h1{
     color:#8880FE;
@@ -34,13 +34,13 @@ main .socia-media{
     align-content:center;
 }
 main .social-media a{
-    text-decoration:none;
+    text-decoration:none; /*retira a decoração dos textos (nesse caso, o efeito de sublinhado)*/
 }
 main .social-media img{
     width:36px;
     margin-left:3rem;
 }
-main .social-media a:first-child img{
+main .social-media a:first-child img{ /*seleciona o primeiro filho da classe social media, entre as tags a*/
     margin-left:0;
 }
 main .alternative{
@@ -57,7 +57,7 @@ main .alternative span::before, main .alternative span::after{
     content:'';
     height:1px;
     width:100px;
-    background:rgba(255,255,255,0.3);
+    background:rgba(255,255,255,0.3); /*os três primeiros valores referenciam a cor, e o ultimo define a opacidade*/
     bottom:50%;
     right:50px;
 }
@@ -83,7 +83,7 @@ main form input{
     height:50px;
     padding:0 0.5rem;
     margin-top:1rem;
-    outline:none;
+    outline:none; /*retira a borda que fica na caixa no momento do focus*/
     color:rgb(199, 199, 199);
     font-size:1rem;
     border:1px solid #040b18;
@@ -95,8 +95,8 @@ main form input[type="submit"]{
     margin-top:4rem;
     border:none;
     border-radius:32px;
-    background:#6c63ff;
-    color:white;
+    background:#6c63ff; /*background altera a cor de fundo*/
+    color:white; /*color altera a cor do texto*/
     font-size:1.1rem;
     transition:all 0.3s ease-in-out;
 }
@@ -120,11 +120,11 @@ section.images .circle{
     width:100%;
     background:linear-gradient(45deg,#e8cbc0,#636fa4);
     top:0;
-    left:0;
-    clip-path:circle(40% at right 80%);
-    z-index:-1;
+    left:0; /*até essa linha, os comandos criam uma cobertura completa da tela, com as cores descritas*/
+    clip-path:circle(40% at right 80%); /*transforma a cobertura em um círculo, mostrando aspenas 40% do seu tamanho e a posiciona na direita, 80% abaixo na tela*/
+    z-index:-1; /*o atributo z-index altera a sobreposíção do elemento (seu valor padrão é 0)*/
 }
-
+/* as linhas abaixo servem para tornar a página responsiva, com variações de configurações de acordo com os tamanhos de tela */
 @media only screen and (min-width:900px) and (max-width:1200px){ /*declara alterações de css, de acordo com alguma condição (nesse caso, quando o width for entre 900px e 1200px)*/ 
     section.images img{
         width:110%;
