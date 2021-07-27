@@ -1,11 +1,12 @@
 body{
-    width:600px;
-	margin: 0 auto;
+	display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100vw;
     background:linear-gradient(45deg,#F0F8FF, #a18ddb); /*adiciona um efeito de transição gradiente na cor, em 45 graus (pode ser com outros valores mais diretos, como "to left" ou "to right")*/
     font-family:sans-serif;
 }
 h3 {
-    margin-left:5em;
     color:#380B61;
     font-size:30px;
 }
@@ -19,8 +20,7 @@ fieldset{
     margin-bottom:1em;
     border-color:#380B61;
     border-radius:1em;
-    width:400px;
-    margin-left:18%;
+    width:340px;
 }
 fieldset.grupo label{
     display:block;
@@ -31,6 +31,13 @@ fieldset.grupo input, textarea{
 }
 fieldset.checks label, input{
     font-size:15px;
+}
+#hour{
+    display:flex;
+    flex-direction:column;
+}
+#hour input[type="number"]{
+    width:250px;
 }
 #checkb{
     margin-bottom:1em;
@@ -62,11 +69,11 @@ textarea, input[type="url"], input[type="file"]{
     background-color:#59429D;
     border:none;
     padding:none;
+    margin-left:10vw;
     width:150px;
     margin-bottom:100px;
     height:30px;
     border-radius:1em;
-    margin-left:250px;
     text-shadow:0.4em;
     font-weight:bold; /*altera o peso do texto (nesse caso, para negrito)*/
     cursor:pointer; /*altera o tipo de cursor no momento que o elemento é selecionado*/ 
