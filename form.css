@@ -28,6 +28,7 @@ fieldset.grupo label{
 }
 fieldset.grupo input, textarea{
     width:250px;
+    outline:none;
 }
 fieldset.checks label, input{
     font-size:15px;

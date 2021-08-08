@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama&display=swap');
+
+/* Reset das propriedades padrão da página nos navegadores */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Georama", sans-serif; /* Definição da fonte Georama, baseado no import digitado na linha 1, ou como alternativa a fonte sans-serif */
+}
+/* Body definido como flex, e conteúdos alinhados com o centro da página */
+body {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:100vw;
+    background: #130f1b;
+}
+/* Estilização do h1 */
+h1 {
+    margin-top:3em;
+    color:#9c8ad3;
+}
+/* Estilização da div container onde está inserido o conteúdo do formulário */
+div.container {
+    text-align:center; /* Centralização dos elementos que contém texto para o centro da div */
+    margin-top:2em; /* Ajuste do espaçamento acima */
+    border:1px solid #2f0b52;
+    padding:2em 1em 1em 1em; /* Ajuste do padding para topo, direita, abaixo e esquerda */
+    border-radius:15px; /* Ajuste do arredondamento das bordas */
+    width:30vw; /* Ajuste da largura da div */
+    background: #9c8ad3; /* Ajuste da cor de fundo da div */
+}
+
+div.container form div.content {
+    transition:all .3s; /* Adição de animação de transição a todos os elementos com duração de 0.3s */
+}
+
+div.container form div.content:first-child { /* Selecionado apenas o primeiro filho da div */
+    margin-bottom:.7em;
+}
+
+div.container form div.content .form-input {
+    margin-bottom:1em;
+    width:80%;
+    height:2.5em;
+    box-shadow:none; /* Remoção das sombras */
+    background:#a18ddb;
+    border-color:#2f0b52;
+    font-size:20px;
+    font-weight:bold;
+    border-style:none none solid none; /* Remoção das bordas topo, direita e esquerda. A borda abaixo foi mantida com estilo solid */
+    transition: all .5s ease; /* Adição de animação de transição a todos os elementos, com duração de 0.5s e efeito ease */
+    outline:none; /* Remoção das bordas internas ao selecionar o elemento */
+    padding:.5em;
+    text-align:center; /* Alinhamento do conteúdo de texto para o centro do elemento */
+}
+/* Estilizar o elemento no momento em que o mouse é passado sobre ele (hover) */
+div.container form div.content .form-input:hover { 
+    letter-spacing:.2em; /* Aumenta o espaçamento das letras */
+}
+/* Estilizar o elemento quando ele está selecionado (focus) e quando o placeholder não está sendo mostrado (:not(:placeholder-shown)) */
+/* Ou seja, quando ele possui conteúdo digitado */
+div.container form div.content .form-input:focus, div.container form div.content .form-input:not(:placeholder-shown) {
+    background:#b3a6db;
+    border-radius:10px;
+    color:#2f0b52;
+    letter-spacing:normal; /* Retorna o espaçamento ao valor normal */
+}
+
+div.container form div.content:focus-within {
+    transform:scale(1.1,1.1); /* Aumenta a escala dimensional dos elementos em 0.1 para cima e para baixo, e para os lados */
+}
+/* Estilizar o placeholder do elemento */
+div.container form div.content .form-input::placeholder {
+    color:#2f0b52;
+    font-size:18px;
+}
+/* Estilizar o botão que está dentro do formulário */
+div.container form button {
+    font-size:18px;
+    width:50%;
+    height:2em;
+    margin-bottom:1em;
+    border-radius:10px;
+    background:#2f0b52;
+    color:#a18ddb;
+    cursor:pointer; /* Faz com que o cursor exibido quando o mouse está sobre o elemento seja alterado (pointer) */
+    transition:all .5s;
+    font-weight:bold; /* Altera o peso da letra (nesse caso, transforma em negrito (bold)) */
+}
+/* Estilizar o elemento quando o mouse está sobre ele */
+div.container form button:hover {
+    transform:scale(1.1);
+    color:#a18ddb;
+}
+/* Estilizar a div alternative */
+div.container div.alternative {
+    margin-bottom:1em;
+    font-size:16px;
+    font-weight:bold;
+    position:relative; /* Define que a posição da div é relativa */
+}
+/* Estilizar o primeiro elemento span da div alternative (:first-child) e o último elemento span da mesma div (:last-child) */
+div.container div.alternative span:first-child, div.container div.alternative span:last-child  {
+    position:absolute; /* Define a posição dos elementos como absoluta, de acordo com o elemento pai relativo */
+    content:''; /* Adiciona um conteúdo vazio para permitir a estilização */
+    top:.5em; /* Afasta o elemento do topo da div */
+    left:10%; /* Afasta o elemento da lateral esquerda da div em 10% do seu tamanho*/
+    background:#2f0b52;
+    height:3px;
+    width:30%; /* Define o tamanho do elemento em 30% da div */
+}
+/* Estilizar o elemento citado anteriormente, mas dessa vez com alterações, já que de acordo com o efeito cascata esta linha de código se torna a predominante */
+div.container div.alternative span:last-child {
+    left:60%; /* Afasta o elemento da lateral esquerda da div em 60% do seu tamanho*/
+}
+
+div.container div.social-media {
+    margin-bottom:1em;
+}
+/* Seleciona todos os botões da div social-media */
+div.container div.social-media button {
+    width:25%;
+    height:1.5em;
+    font-size:35px;
+    border-radius:10px;
+    background:#2f0b52;
+    color:#b3a6db;
+    cursor:pointer;
+    transition:all .3s ease;
+}
+/* Estilizar os botões quando o mouse está sobre eles */
+div.container div.social-media button:hover {
+    transform:scale(1.1);
+    background:#b3a6db;
+    color:#2f0b52;
+    border:.5px solid #2f0b52;
+}
+/* Estilizar apenas os botões de número 2 e 3, filhos da div social-media */
+div.container div.social-media button:nth-child(2), div.container div.social-media button:nth-child(3) {
+    margin-left:.25em;
+}

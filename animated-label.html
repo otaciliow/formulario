@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="animated-label.css">
+    <title>Animated Label</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <div class="form-group">
+                <!-- Para poder fazer a animação funcionar, a "ordem semântica" do label e do input deve ser invertida, ,já que o seletor que será usado deve ser o de adjacente (nesse caso, o elemento adjacente ao input) -->
+                <!-- É necessário ter um placeholder, para que a animação funcione corretamente -->
+                <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" tabindex="1">
+                <label for="name" class="form-label">Your Name</label>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" tabindex="2" placeholder="Seu E-mail">
+                <label for="email" class="form-label">Your E-mail</label>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

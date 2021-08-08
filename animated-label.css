@@ -1,0 +1,63 @@
+/* Código padrão para centralizar as divs e ajustar cor de fundo e a fonte */
+body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:sans-serif;
+    background:#9DB991;
+}
+/* Código usado para definir as características do "container" onde as divs estarão */
+.container {
+    width:65vw;
+    box-shadow:0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+    padding:2em;
+    background:#FFF;
+    border-radius:5px;
+}
+/* Div que contém cada dupla dos campos input e label */
+.form-group {
+    margin-bottom:1em;
+    margin-left:.5em;
+    transition: all .3s; /* adiciona uma animação de expansão simples ao selecionar cada div */
+}
+/* Código usado para estilizar as labels da página */
+.form-label {
+    font-size:1em;
+    color:#aaa;
+    display:block; /* Transforma o elemento em bloco, e faz com que ele seja "empurrado" para baixo na página */
+    opacity:1;
+    transform:translateY(-1.25em); /* Arrasta o elemento no eixo Y (para cima ou para baixo). Nesse caso, para cima devido ao sinal negativo */
+    transform-origin:0 0; /* Faz com que as transformações aconteçam no topo esquerdo da div */
+    transition:all .3s;
+}
+/* Código usado para estilizar os inputs da página */
+.form-control {
+    box-shadow:none; /* Remove as sombras do elemento (alguns navegadores adicionam bordas por padrão */
+    background:rgba(0,0,0,.02);
+    border-radius:0px;
+    border-color:#ccc;
+    border-style:none none solid none; /* Faz a borda aparecer apenas na parte de baixo (cima, direita, baixo, esquerda) */
+    width:95%;
+    transition:all .5s;
+    padding:5px;
+}
+/* Código usado para controlar os placeholders dos inputs */
+.form-control::placeholder {
+    color:transparent; /* Torna os textos placehoders transparentes (eles ainda estão lá) */
+}
+/* Código usado para alterar o comportamento do input quando ele está selecionado (clicado) */
+.form-control:focus {
+    box-shadow:none;
+    outline:none; /* Remove as linhas externas (alguns navegadores exibem por padrão) */
+    border-color:orange;
+}
+/* Código usado para estilizar os labels quando os inputs forem selecionados (:focus), e enquanto os placeholders não estiverem sendo exibidos (:not(:placeholder-shown) */
+/* Basicamente, adiciona uma animação ao label no momento que seu input é selecionado, e a mantém equanto algum valor estiver digitado nele */
+.form-control:focus + .form-label, .form-control:not(:placeholder-shown) + .form-label {
+    transform:translateY(-2.5em) scale(.8); /* Empurra o label para cima (eixo Y negativo) em -2.5em e diminui sua escala para 0.8 */
+}
+/* Código usado para estilizar um elemento parente quando o elemento pai for selecionado (focus-within) */
+.form-group:focus-within {
+    transform:scale(1.05,1.05); /* Aumenta a escala do elemento em 1.05 na sua altura, e 1.05 na sua largura */
+}
