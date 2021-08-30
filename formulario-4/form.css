@@ -23,6 +23,8 @@ h1 {
 }
 /* Estilização da div container onde está inserido o conteúdo do formulário */
 div.container {
+    display:flex;
+    flex-direction:column;
     text-align:center; /* Centralização dos elementos que contém texto para o centro da div */
     margin-top:2em; /* Ajuste do espaçamento acima */
     border:1px solid #2f0b52;
@@ -34,6 +36,19 @@ div.container {
 
 div.container form div.content {
     transition:all .3s; /* Adição de animação de transição a todos os elementos com duração de 0.3s */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+div.container form div.content label {
+    color:#2f0b52;
+    visibility:hidden;
+}
+
+div.container form div.content label.visible {
+    visibility:visible;
+    transition:all 0.5s ease;
 }
 
 div.container form div.content:first-child { /* Selecionado apenas o primeiro filho da div */
@@ -76,8 +91,8 @@ div.container form div.content .form-input::placeholder {
     color:#2f0b52;
     font-size:18px;
 }
-/* Estilizar o botão que está dentro do formulário */
-div.container form button {
+/* Estilizar o botão que está dentro do formulário
+div.container button {
     font-size:18px;
     width:50%;
     height:2em;
@@ -85,45 +100,48 @@ div.container form button {
     border-radius:10px;
     background:#2f0b52;
     color:#a18ddb;
-    cursor:pointer; /* Faz com que o cursor exibido quando o mouse está sobre o elemento seja alterado (pointer) */
+    cursor:pointer; Faz com que o cursor exibido quando o mouse está sobre o elemento seja alterado (pointer)
     transition:all .5s;
-    font-weight:bold; /* Altera o peso da letra (nesse caso, transforma em negrito (bold)) */
+    font-weight:bold; Altera o peso da letra (nesse caso, transforma em negrito (bold))
 }
-/* Estilizar o elemento quando o mouse está sobre ele */
+Estilizar o elemento quando o mouse está sobre ele
 div.container form button:hover {
     transform:scale(1.1);
     color:#a18ddb;
-}
+} */
 /* Estilizar a div alternative */
 div.container div.alternative {
+    display:flex;
+    justify-content:center;
+    align-items:center;
     margin-bottom:1em;
     font-size:16px;
     font-weight:bold;
     position:relative; /* Define que a posição da div é relativa */
 }
 /* Estilizar o primeiro elemento span da div alternative (:first-child) e o último elemento span da mesma div (:last-child) */
-div.container div.alternative span:first-child, div.container div.alternative span:last-child  {
+div.container div.alternative span /*:first-child,  div.container div.alternative span:last-child */  {
     position:absolute; /* Define a posição dos elementos como absoluta, de acordo com o elemento pai relativo */
     content:''; /* Adiciona um conteúdo vazio para permitir a estilização */
     top:.5em; /* Afasta o elemento do topo da div */
-    left:10%; /* Afasta o elemento da lateral esquerda da div em 10% do seu tamanho*/
+    /* left:10%; Afasta o elemento da lateral esquerda da div em 10% do seu tamanho */
     background:#2f0b52;
     height:3px;
-    width:30%; /* Define o tamanho do elemento em 30% da div */
+    width:80%; /* Define o tamanho do elemento em 30% da div */
 }
 /* Estilizar o elemento citado anteriormente, mas dessa vez com alterações, já que de acordo com o efeito cascata esta linha de código se torna a predominante */
-div.container div.alternative span:last-child {
-    left:60%; /* Afasta o elemento da lateral esquerda da div em 60% do seu tamanho*/
-}
+/* div.container div.alternative span:last-child {
+    left:60%; Afasta o elemento da lateral esquerda da div em 60% do seu tamanho
+} */
 
 div.container div.social-media {
     margin-bottom:1em;
 }
 /* Seleciona todos os botões da div social-media */
 div.container div.social-media button {
-    width:25%;
+    width:40%;
     height:1.5em;
-    font-size:35px;
+    font-size:30px;
     border-radius:10px;
     background:#2f0b52;
     color:#b3a6db;
@@ -140,4 +158,107 @@ div.container div.social-media button:hover {
 /* Estilizar apenas os botões de número 2 e 3, filhos da div social-media */
 div.container div.social-media button:nth-child(2), div.container div.social-media button:nth-child(3) {
     margin-left:.25em;
+}
+
+/* Página 2 (Dados) */
+
+div.container-main {
+    display:flex;
+    flex-direction:column;
+    min-width:100%;
+    min-height:100vh;
+}
+
+nav.navbar.active {
+    display:flex;
+    flex-direction:column;
+    position:fixed;
+    align-items:center;
+    background:#9c8ad3;
+    color:#130f1b;
+    height:100%;
+    width:15%;
+    padding:1em 0 0 0;
+    transition:all 0.5s;
+}
+
+nav.navbar.closed {
+    width:5%;
+}
+
+nav.navbar header {
+    width:90%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    height:60px;
+}
+
+nav.navbar header span {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    background:#130f1b;
+    color:#a18ddb;
+    border-radius:10px;
+    width:50px;
+    height:40px;
+    cursor:pointer;
+}
+
+nav.navbar header span:hover {
+    background:#493d70;
+    color:#130f1b;
+}
+
+nav.navbar header span.closed {
+    display:none;
+}
+
+nav.navbar a {
+    color:#130f1b;
+    text-decoration:none;
+}
+
+nav.navbar li {
+    display:flex;
+    list-style:none;
+    align-items:center;
+    font-size:18px;
+    margin:15px 0;
+    height:50px;
+    width:100%;
+    border-radius:10px;
+    cursor:pointer;
+    /* transition:all 0.7s ease; */
+}
+
+/* nav.navbar li:hover {
+    background:#130f1b;
+    color:#a18ddb;
+} */
+
+nav.navbar li span {
+    display:inline;
+    vertical-align:middle;
+}
+
+nav.navbar li span:last-child {
+    margin-left:5px;
+}
+
+div.content1.active {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:70%;
+    margin-left:15%;
+    padding:1em;
+    color:#b3a6db;
+}
+
+div.content1.closed {
+    margin-left:5%;
 }

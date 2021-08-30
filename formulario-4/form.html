@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="form.js"></script>
+    <title>Página de Login Animada (CSS e Javascript)</title>
+</head>
+<body>
+    <h1>Login <span class="material-icons">catching_pokemon</span></h1>
+    <div class="container">
+        <form action="dados.html" class="formulario" id="form1">
+            <div class="content">
+                <input type="text" class="form-input" id="login" name="login" placeholder="Usuário" autocomplete="off">
+                <label for="login" class="form-label" id="login-erro">Usuário incorreto</label>
+            </div>
+            <div class="content">
+                <input type="password" class="form-input" id="passw" name="passw" placeholder="Senha" autocomplete="off">
+                <label for="passw" class="form-label" id="senha-erro">Senha incorreta</label>
+            </div>
+        </form>
+        <div class="alternative">
+            <!-- <span></span> -->
+            <!-- <span></span> -->
+        </div>
+        <div class="social-media">
+            <button type="submit" form="form1">Entrar</button>
+            <!-- <button><i class="fab fa-google"></i></button>
+            <button><i class="fab fa-facebook"></i></button>
+            <button><i class="fab fa-apple"></i></button> -->
+        </div>
+    </div>
+</body>
+</html>
