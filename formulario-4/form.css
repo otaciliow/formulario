@@ -48,7 +48,7 @@ div.container form div.content label {
 
 div.container form div.content label.visible {
     visibility:visible;
-    transition:all 0.5s ease;
+    /* transition:all 0.5s ease; */
 }
 
 div.container form div.content:first-child { /* Selecionado apenas o primeiro filho da div */
@@ -169,21 +169,24 @@ div.container-main {
     min-height:100vh;
 }
 
-nav.navbar.active {
-    display:flex;
-    flex-direction:column;
-    position:fixed;
-    align-items:center;
-    background:#9c8ad3;
-    color:#130f1b;
+div.container-main.active nav.navbar {
     height:100%;
-    width:15%;
-    padding:1em 0 0 0;
+    width:11%;
     transition:all 0.5s;
 }
 
-nav.navbar.closed {
-    width:5%;
+nav.navbar {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    position:fixed;
+    width:4%;
+    background:#9c8ad3;
+    color:#130f1b;
+    height:100%;
+    padding:1em 0 0 0;
+    vertical-align:middle;
+    transition:all 0.5s;
 }
 
 nav.navbar header {
@@ -208,6 +211,10 @@ nav.navbar header span {
     cursor:pointer;
 }
 
+div.container-main.active nav.navbar header span {
+    display:none;
+}
+
 nav.navbar header span:hover {
     background:#493d70;
     color:#130f1b;
@@ -217,28 +224,35 @@ nav.navbar header span.closed {
     display:none;
 }
 
-nav.navbar a {
-    color:#130f1b;
-    text-decoration:none;
+div.container-main.active nav.navbar header span.closed {
+    display:flex;
+}
+
+nav.navbar ul {
+    width:100%;
 }
 
 nav.navbar li {
     display:flex;
     list-style:none;
     align-items:center;
+    padding-left:0.9em;
+    white-space:nowrap;
     font-size:18px;
     margin:15px 0;
     height:50px;
-    width:100%;
-    border-radius:10px;
+    border-radius:7px;
     cursor:pointer;
-    /* transition:all 0.7s ease; */
 }
 
-/* nav.navbar li:hover {
+nav.navbar li:hover {
     background:#130f1b;
-    color:#a18ddb;
-} */
+    color:#9c8ad3;
+}
+
+div.container-main.active nav.navbar li {
+    width:100%;
+}
 
 nav.navbar li span {
     display:inline;
@@ -246,19 +260,41 @@ nav.navbar li span {
 }
 
 nav.navbar li span:last-child {
-    margin-left:5px;
+    margin-left:0.5em;
 }
 
-div.content1.active {
+nav.navbar li span.about {
+    opacity:0;
+}
+div.container-main.active nav.navbar li span.about {
+    opacity:1;
+}
+
+div.container-main.active div.containers {
+    margin-left:11%;
+    transition:0.5s ease;
+}
+
+div.containers {
     display:flex;
     flex-direction:column;
     align-items:center;
+    position:absolute;
     width:70%;
-    margin-left:15%;
+    margin-left:4%;
     padding:1em;
     color:#b3a6db;
+    transition:0.5s ease;
 }
 
-div.content1.closed {
-    margin-left:5%;
+div#container2 {
+    display:none;
+}
+
+div#container3 {
+    display:none;
+}
+
+div#container4 {
+    display:none;
 }

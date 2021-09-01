@@ -1,12 +1,46 @@
 window.onload = function() {
-    document.getElementById('toggle-navbar').onclick = navbar;
+    document.getElementById('navbar-open').onclick = navbarOpen;
+    document.getElementById('navbar-close').onclick = navbarClose;
+    document.getElementById('about-me').onclick = togglePage1;
+    document.getElementById('projects').onclick = togglePage2;
+    document.getElementById('contacts').onclick = togglePage3;
+    document.getElementById('mentions').onclick = togglePage4;
 }
 
-function navbar() {
-    let navbar = document.querySelector('nav');
-    let content1 = document.querySelector('content1');
+const divMain = document.querySelector('.container-main');
 
-    navbar.classList.toggle('active');
-    content1.classList.toggle('active');
-    
+function navbarOpen () {
+    divMain.classList.toggle('active');
+}
+
+function navbarClose () {
+    divMain.classList.toggle('active');
+}
+
+function togglePage1 () {
+    document.getElementById('container1').style.display = 'flex'
+    document.getElementById('container2').style.display = 'none'
+    document.getElementById('container3').style.display = 'none'
+    document.getElementById('container4').style.display = 'none'
+}
+
+function togglePage2 () {
+    document.getElementById('container1').style.display = 'none'
+    document.getElementById('container2').style.display = 'flex'
+    document.getElementById('container3').style.display = 'none'
+    document.getElementById('container4').style.display = 'none'
+}
+
+function togglePage3 () {
+    document.getElementById('container1').style.display = 'none'
+    document.getElementById('container2').style.display= 'none'
+    document.getElementById('container3').style.display = 'flex'
+    document.getElementById('container4').style.display = 'none'
+}
+
+function togglePage4 () {
+    document.getElementById('container1').style.display = 'none'
+    document.getElementById('container2').style.display = 'none'
+    document.getElementById('container3').style.display = 'none'
+    document.getElementById('container4').style.display = 'flex'
 }

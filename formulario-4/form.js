@@ -10,6 +10,7 @@ validar = function() {
     if (document.getElementById("login").value != 'otaciliow') {
         temErro = true;
         document.getElementById('login-erro').classList.add('visible');
+        console.log('deu ruim');
     }
 
     if (document.getElementById('passw').value != '54321') {
@@ -22,7 +23,7 @@ validar = function() {
 
 function resetErrorLogin () {
     document.getElementById('login-erro').classList.remove('visible');
-    
+
 }
 
 function resetErrorSenha() {

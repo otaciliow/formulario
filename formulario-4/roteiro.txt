@@ -1,0 +1,18 @@
+Total de seções na página: 4
+
+Pág 1 - Sobre mim
+
+Página para falar sobre coisas pessoais, como um breve resumo da minha vida, descrição de coisas que gosto e acho importantes (e o contrário também), hobbies e os estilos de música favoritos. Apresentar alguns deles como atributos em um estilo semelhante aos RPG's e jogos de carta.
+
+Pág 2 - Projetos (Portfólio)
+
+Página para exibir os projetos que produzi até o momento (páginas web com programação em javascript e outras tecnologias). Estrutura semelhante à de um catálogo de filmes.
+. Recursos: display em sumários, projetos exibidos em um GIF, :hover aumenta a escala e exibe melhor a descrição de cada um
+
+Pág 3 - Contato
+
+Página com os links de acesso às minhas redes sociais (linkedin, instagram, github, etc)
+
+pàg 4 - Agradecimentos
+
+Página com agradecimentos ao FORSOFT ACADEMY e todos os que estiveram envolvidos nos projetos apresentados durante a transição para a área de programação
