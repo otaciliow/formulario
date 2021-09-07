@@ -1,0 +1,40 @@
+$divColor: #b290f3;
+
+@mixin body-reset() {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    background:#7952c1;
+    display:flex;
+    color:#FFF;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+@mixin div-style() {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:250px;
+    width:350px;
+    margin:10px;
+    border-radius:10px;
+    background:$divColor;
+    color:#0c0c0c;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+body {
+    @include body-reset();
+}
+
+div {
+    @include div-style;
+
+    input {
+        background:#fff;
+        width:200px;
+    }
+}
